@@ -10,9 +10,11 @@ fun Application.configureRouting() {
     routing {
         get("/pavan"){
         val empdetails = call.receive<EmployeeCredentials>()
+            val sno = empdetails.sno
             val name = empdetails.name
             val empid = empdetails.empid
             db.insert(employe){
+                set(it.sno,sno)
                 set(it.name,name)
                 set(it.empid,empid)
         }
