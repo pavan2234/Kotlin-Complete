@@ -3,7 +3,6 @@ package com.example.Interface
 import me.liuwj.ktorm.entity.Entity
 
 interface vehicle:Entity<vehicle> {
-    companion object:Entity.Factory<vehicle>()
     val vehicleid:Int
     val reg_number:String
     val customerid:customer

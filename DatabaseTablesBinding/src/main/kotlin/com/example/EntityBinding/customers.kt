@@ -6,7 +6,7 @@ import me.liuwj.ktorm.schema.int
 import me.liuwj.ktorm.schema.varchar
 
 object customers:Table<customer>("customer") {
-    val customerid=int("id").primaryKey().bindTo { it.customerid }
+    val customerid=int("customerid").primaryKey().bindTo { it.customerid }
     val cust_hash = varchar("cust_hash").bindTo { it.cust_hash }
     val name=varchar("name").bindTo { it.name }
     val phone_number=varchar("phone_number").bindTo { it.phone_number }

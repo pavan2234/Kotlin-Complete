@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://www.liquibase.org/xml/ns/dbchangelog" location="$PROJECT_DIR$" />
+    <resource url="http://www.liquibase.org/xml/ns/dbchangelog-ext" location="$PROJECT_DIR$" />
+    <resource url="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd" location="$PROJECT_DIR$" />
+    <resource url="http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd" location="$PROJECT_DIR$" />
+    <resource url="http://www.liquibase.org/xml/ns/pro" location="$PROJECT_DIR$" />
+    <resource url="http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd&quot;&gt;" location="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="openjdk-18" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

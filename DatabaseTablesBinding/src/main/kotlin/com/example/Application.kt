@@ -1,6 +1,7 @@
 package com.example
 
-import com.example.Module.inserting
+import com.example.services.inserting
+import com.example.routes.routes
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.serialization.kotlinx.json.*
@@ -13,5 +14,6 @@ fun main() {
             json()
         }
         inserting()
+        routes()
     }.start(wait = true)
 }

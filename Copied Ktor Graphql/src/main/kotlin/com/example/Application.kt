@@ -13,7 +13,8 @@ fun main() {
         json()
     }
         //configureRouting()
-        Printing()
+        //Printing()
+        EmploySchema()
 
     }.start(wait = true)
 }
