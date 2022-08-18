@@ -2,7 +2,7 @@ buildscript {
     repositories {
         jcenter()
     }
-    
+
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -40,16 +40,11 @@ dependencies {
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.29'
     implementation group: 'org.ktorm', name: 'ktorm-core', version: '3.5.0'
 
-
-
     implementation "com.apurebase:kgraphql:$kgraphql_version"
     implementation "com.apurebase:kgraphql-ktor:$kgraphql_version"
 
     implementation "io.ktor:ktor-client-core:$ktor_version"
     implementation "io.ktor:ktor-client-cio:$ktor_version"
-
-
-
 
 
 }
