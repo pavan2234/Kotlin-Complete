@@ -4,10 +4,12 @@ val logback_version: String by project
 val ktorm_core: String by project
 val hikari_CP_version: String by project
 val ktorm_jackson: String by project
+val exposed_version: String by project
 
 plugins {
     application
     kotlin("jvm") version "1.7.10"
+    id ("org.jetbrains.kotlin.plugin.serialization") version "1.7.0"
 }
 
 group = "com.example"
@@ -31,7 +33,7 @@ dependencies {
     implementation("mysql:mysql-connector-java:8.0.28")
     implementation("org.ktorm:ktorm-core:$ktorm_core")
     implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
-    implementation("io.ktor:ktor-serialization-gson:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 
     implementation("com.zaxxer:HikariCP:$hikari_CP_version")
     implementation("org.ktorm:ktorm-jackson:$ktorm_jackson")
@@ -44,4 +46,9 @@ dependencies {
     implementation("com.intuit.karate", "karate-junit5", "0.9.4")
 
 
+
+    implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
+    implementation("org.jetbrains.exposed:exposed-dao:$exposed_version")
+    implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
+    implementation("org.jetbrains.exposed:exposed-java-time:$exposed_version")
 }

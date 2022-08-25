@@ -1,0 +1,13 @@
+[
+  {
+    "h": {
+      "entityClass": {},
+      "values": {
+        "id": "#number",
+        "name": "#string",
+        "age": "#string",
+        "area": "#string"
+      }
+    }
+  }
+]
