@@ -8,5 +8,4 @@ object Kungfu: Table("kungfu"){
     val name = varchar("name",50)
     val age = varchar("age",50)
     val area = varchar("area",50)
-
 }

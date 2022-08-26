@@ -2,7 +2,7 @@ package com.tdl.motorinsurance.repositaries
 
 import com.tdl.motorinsurance.dbconfig.DatabaseFactory
 import com.tdl.motorinsurance.entities.*
-import com.tdl.motorinsurance.model.QuoteDTO
+import com.tdl.motorinsurance.model.*
 import org.ktorm.database.TransactionIsolation
 import org.ktorm.dsl.*
 
@@ -102,10 +102,136 @@ class QuoteRepositary {
         }
     }
 
-    suspend fun getNomineesWithCustomers(): List<Quote> {
+    suspend fun getNomineesWithCustomers(): List<QuoteDTO> {
         return DatabaseFactory.dbQuery {
             DatabaseFactory.getConnection().from(Quotes).joinReferencesAndSelect()
-                .map { row -> Quotes.createEntity(row, withReferences = true) }
+                .map { row -> Quotes.createEntity(row, withReferences = true) }.map {
+                    QuoteDTO(
+                        it.id,
+                        it.vehicle.id,
+                        it.customer.id,
+                        it.prev_policy.id,
+                        it.nominees,
+                        it.addr_id,
+                        it.type,
+                        it.insurer,
+                        it.insurerr,
+                        it.idv_details,
+                        it.add_ons,
+                        it.created_at,
+                        it.updated_at,
+                        CustomerDTO(
+                            it.customer.id,
+                            it.customer.cust_hash,
+                            it.customer.name,
+                            it.customer.phone_number,
+                            it.customer.email,
+                            it.customer.created_at,
+                            it.customer.updated_at
+                        ),
+                        VehicleDTO(
+                            it.vehicle.id,
+                            it.vehicle.cust_id,
+                            it.vehicle.reg_number,
+                            it.vehicle.type,
+                            it.vehicle.make,
+                            it.vehicle.model,
+                            it.vehicle.variant,
+                            it.vehicle.reg_date,
+                            it.vehicle.engine_number,
+                            it.vehicle.chassis_number,
+                            it.vehicle.created_at,
+                            it.vehicle.updated_at,
+                            CustomerDTO(
+                                it.customer.id,
+                                it.customer.cust_hash,
+                                it.customer.name,
+                                it.customer.phone_number,
+                                it.customer.email,
+                                it.customer.created_at,
+                                it.customer.updated_at
+                            )
+                        ),
+                        Prev_PolicyDTO(
+                            it.prev_policy.id,
+                            it.prev_policy.vehicle.id,
+                            it.prev_policy.insurer_name,
+                            it.prev_policy.policy_number,
+                            it.prev_policy.is_expired,
+                            it.prev_policy.ncb_benifit,
+                            it.prev_policy.created_at,
+                            it.prev_policy.updated_at,
+                            VehicleDTO(
+                                it.vehicle.id,
+                                it.vehicle.cust_id,
+                                it.vehicle.reg_number,
+                                it.vehicle.type,
+                                it.vehicle.make,
+                                it.vehicle.model,
+                                it.vehicle.variant,
+                                it.vehicle.reg_date,
+                                it.vehicle.engine_number,
+                                it.vehicle.chassis_number,
+                                it.vehicle.created_at,
+                                it.vehicle.updated_at,
+                                CustomerDTO(
+                                    it.vehicle.customer.id,
+                                    it.vehicle.customer.cust_hash,
+                                    it.vehicle.customer.name,
+                                    it.vehicle.customer.phone_number,
+                                    it.vehicle.customer.email,
+                                    it.vehicle.customer.created_at,
+                                    it.vehicle.customer.updated_at
+                                )
+
+                            )
+                        ),
+                        AddressDTO(
+                            it.address.id,
+                            it.address.customer.id,
+                            it.address.vehicle.id,
+                            it.address.addr_line1,
+                            it.address.addr_line2,
+                            it.address.pincode,
+                            it.address.created_at,
+                            it.address.updated_at,
+                            CustomerDTO(
+                                it.customer.id,
+                                it.customer.cust_hash,
+                                it.customer.name,
+                                it.customer.phone_number,
+                                it.customer.email,
+                                it.customer.created_at,
+                                it.customer.updated_at
+                            ),
+                            VehicleDTO(
+                                it.vehicle.id,
+                                it.vehicle.cust_id,
+                                it.vehicle.reg_number,
+                                it.vehicle.type,
+                                it.vehicle.make,
+                                it.vehicle.model,
+                                it.vehicle.variant,
+                                it.vehicle.reg_date,
+                                it.vehicle.engine_number,
+                                it.vehicle.chassis_number,
+                                it.vehicle.created_at,
+                                it.vehicle.updated_at,
+                                CustomerDTO(
+                                    it.customer.id,
+                                    it.customer.cust_hash,
+                                    it.customer.name,
+                                    it.customer.phone_number,
+                                    it.customer.email,
+                                    it.customer.created_at,
+                                    it.customer.updated_at
+                                )
+                            )
+                        )
+
+
+                    )
+                }
         }
     }
 

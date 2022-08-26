@@ -1,9 +1,12 @@
 package com.tdl.motorinsurance.model
 
+import com.tdl.motorinsurance.entities.Customer
+import com.tdl.motorinsurance.entities.Vehicle
+
 data class AddressDTO(
     val id:String,
     val cust_id:String,
-    val veh_id:String,
+    val veh_id: String,
     val addr_line1:String,
     val addr_line2:String,
     val pincode:String,

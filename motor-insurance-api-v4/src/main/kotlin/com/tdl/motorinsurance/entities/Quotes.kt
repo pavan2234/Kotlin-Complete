@@ -17,9 +17,9 @@ interface Quote : Entity<Quote> {
     val addr_id:String
     val type:String
     val insurer:String
-    val insurerr:InsurerQuoteIdentifier
-    val idv_details:IDVDetails
-    val add_ons:AddOns
+    val insurerr:InsurerQuoteIdentifier?
+    val idv_details:IDVDetails?
+    val add_ons:AddOns?
     val created_at:String
     val updated_at:String
     val vehicle:Vehicle

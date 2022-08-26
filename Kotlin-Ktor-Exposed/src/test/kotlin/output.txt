@@ -1,0 +1,24 @@
+[
+    {
+        "h": {
+            "entityClass": {},
+            "values": {
+                "id": 1,
+                "name": "Pavan",
+                "age": "22",
+                "area": {
+                    "h": {
+                        "entityClass": {},
+                        "values": {
+                            "areaid": 1,
+                            "Address_line": "Boduppal",
+                            "Colony": "Adarsh nagar",
+                            "place": "Uppal",
+                            "pincode": "500032"
+                        }
+                    }
+                }
+            }
+        }
+    }
+]

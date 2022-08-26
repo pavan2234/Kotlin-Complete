@@ -12,7 +12,7 @@ class CustomerService {
         return customerRepository.saveCustomer(params)
     }
 
-    suspend fun getCustomers(): List<Customer> {
+    suspend fun getCustomers(): List<CustomerDTO> {
         return customerRepository.getCustomers()
     }
 }

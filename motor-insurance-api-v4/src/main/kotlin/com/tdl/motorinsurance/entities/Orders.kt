@@ -24,17 +24,17 @@ interface Order : Entity<Order> {
 }
 
 object Orders : Table<Order>("order") {
-    val id = varchar("id").primaryKey()
-    val quote_id = varchar("quote_id")
-    val cust_id = varchar("cust_id")
-    val tcp_order_id = varchar("tcp_order_id")
-    val tcp_transaction_id = varchar("tcp_transaction_id")
-    val tcp_refund_id = varchar("tcp_refund_id")
-    val policy_number = varchar("policy_number")
-    val order_amount = int("order_amount")
-    val status = varchar("status")
-    val failure_code = varchar("failure_code")
-    val failure_reason = varchar("failure_reason")
-    val created_at = varchar("created_at")
-    val updated_at = varchar("updated_at")
+    val id = int("id").primaryKey()
+    val quote_id = int("quote_id").references(Quotes) { it.quote }
+    val cust_id = int("cust_id").references(Customers){it.customer}
+    val tcp_order_id = int("tcp_order_id").bindTo { it.tcp_order_id }
+    val tcp_transaction_id = int("tcp_transaction_id").bindTo { it.tcp_transaction_id }
+    val tcp_refund_id = int("tcp_refund_id").bindTo { it.tcp_refund_id }
+    val policy_number = int("policy_number").bindTo { it.policy_number }
+    val order_amount = int("order_amount").bindTo { it.order_amount }
+    val status = varchar("status").bindTo { it.status }
+    val failure_code = varchar("failure_code").bindTo { it.failure_code }
+    val failure_reason = varchar("failure_reason").bindTo { it.failure_reason }
+    val created_at = varchar("created_at").bindTo { it.created_at }
+    val updated_at = varchar("updated_at").bindTo { it.updated_at }
 }

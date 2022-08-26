@@ -8,14 +8,14 @@ import org.ktorm.schema.boolean
 import org.ktorm.schema.varchar
 
 interface Prev_Policy : Entity<Prev_Policy> {
-    val id: String?
-    val veh_id: String?
-    val insurer_name: String?
+    val id: String
+    val veh_id: String
+    val insurer_name: String
     val policy_number: String
-    val is_expired:Boolean?
+    val is_expired:Boolean
     val ncb_benifit: Ncb_Benifit?
-    val created_at: String?
-    val updated_at: String?
+    val created_at: String
+    val updated_at: String
     val vehicle:Vehicle
 }
 

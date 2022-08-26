@@ -7,7 +7,7 @@ import org.ktorm.schema.varchar
 
 interface Vehicle : Entity<Vehicle> {
     val id: String
-    val cust_id: Int
+    val cust_id: String
     val reg_number: String
     val type: String
     val make: String

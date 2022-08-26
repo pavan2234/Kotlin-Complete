@@ -18,7 +18,7 @@ object DatabaseFactory {
         config.driverClassName = "com.mysql.cj.jdbc.Driver"
         config.jdbcUrl = "jdbc:mysql://localhost:3306/apidetails"
         config.username="root"
-        config.password="techouts"
+        config.password="root"
         config.maximumPoolSize = 10
         config.isAutoCommit = false
         config.transactionIsolation = "TRANSACTION_REPEATABLE_READ"

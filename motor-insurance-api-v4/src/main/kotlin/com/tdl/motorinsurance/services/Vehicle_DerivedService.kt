@@ -20,7 +20,7 @@ class Vehicle_DerivedService {
         return vehicle_derivedRepository.getVehicle_Derived()
     }
 
-    suspend fun getVehicle_derivedWithCustomers(): List<Vehicle_Derived> {
+    suspend fun getVehicle_derivedWithCustomers(): List<Vehicle_DerivedDTO> {
         return vehicle_derivedRepository.getVeicle_DerivedWithCustomers()
     }
 

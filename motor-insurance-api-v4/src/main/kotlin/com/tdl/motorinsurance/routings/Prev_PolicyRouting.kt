@@ -55,7 +55,8 @@ fun Application.configurePrev_PolicyRouting() {
             }
 
             get ("/getOnboarding"){
-
+                var params=call.receive<Prev_PolicyDTO>()
+                call.respond(prev_PolicyService.getOnboarding(params))
             }
 
         }

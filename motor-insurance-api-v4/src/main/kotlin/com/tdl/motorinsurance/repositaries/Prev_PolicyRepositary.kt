@@ -2,9 +2,7 @@ package com.tdl.motorinsurance.repositaries
 
 import com.tdl.motorinsurance.dbconfig.DatabaseFactory
 import com.tdl.motorinsurance.entities.*
-import com.tdl.motorinsurance.model.Ncb_Benifit
-import com.tdl.motorinsurance.model.Prev_PolicyDTO
-import com.tdl.motorinsurance.model.Vehicle_DerivedDTO
+import com.tdl.motorinsurance.model.*
 import org.ktorm.database.TransactionIsolation
 import org.ktorm.dsl.*
 
@@ -78,10 +76,46 @@ class Prev_PolicyRepositary {
 
 
 
-    suspend fun getPrev_PolicyWithVehicle(): List<Prev_Policy> {
+    suspend fun getPrev_PolicyWithVehicle(): List<Prev_PolicyDTO> {
         return DatabaseFactory.dbQuery {
             DatabaseFactory.getConnection().from(Prev_Policies).joinReferencesAndSelect()
-                .map { row -> Prev_Policies.createEntity(row, withReferences = true) }
+                .map { row -> Prev_Policies.createEntity(row, withReferences = true) }.map {
+                        Prev_PolicyDTO(
+                            it.id,
+                            it.vehicle.id,
+                            it.insurer_name,
+                            it.policy_number,
+                            it.is_expired,
+                            it.ncb_benifit,
+                            it.created_at,
+                            it.updated_at,
+                            VehicleDTO(
+                                it.vehicle.id,
+                                it.vehicle.cust_id,
+                                it.vehicle.reg_number,
+                                it.vehicle.type,
+                                it.vehicle.make,
+                                it.vehicle.model,
+                                it.vehicle.variant,
+                                it.vehicle.reg_date,
+                                it.vehicle.engine_number,
+                                it.vehicle.chassis_number,
+                                it.vehicle.created_at,
+                                it.vehicle.updated_at,
+                                CustomerDTO(
+                                    it.vehicle.customer.id,
+                                    it.vehicle.customer.cust_hash,
+                                    it.vehicle.customer.name,
+                                    it.vehicle.customer.phone_number,
+                                    it.vehicle.customer.email,
+                                    it.vehicle.customer.created_at,
+                                    it.vehicle.customer.updated_at
+                                )
+
+                            )
+                            )
+                    }
+
         }
     }
 
@@ -205,13 +239,21 @@ class Prev_PolicyRepositary {
     }
 
 
-    fun getOnboarding(params: Prev_PolicyDTO):Int{
+    fun getOnboarding(params: Prev_PolicyDTO){
         val dbConnection = DatabaseFactory.getConnection()
         val transaction =
             dbConnection.transactionManager.newTransaction(isolation = TransactionIsolation.READ_COMMITTED)
-        try {
-
+        if ((Prev_Policies.veh_id).equals(params.veh_id)){
+            var noOfeffected:Int
+            var d = dbConnection.from(Prev_Policies).joinReferencesAndSelect().
+                    map { row -> Prev_Policies.createEntity(row) }
+            transaction.commit()
+            println(d)
+        }else{
+            println("Failed")
         }
+        transaction.close()
+
     }
 
 }

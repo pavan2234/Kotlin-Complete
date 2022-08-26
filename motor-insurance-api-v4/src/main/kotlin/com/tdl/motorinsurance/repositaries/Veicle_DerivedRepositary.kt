@@ -2,6 +2,7 @@ package com.tdl.motorinsurance.repositaries
 
 import com.tdl.motorinsurance.dbconfig.DatabaseFactory
 import com.tdl.motorinsurance.entities.*
+import com.tdl.motorinsurance.model.CustomerDTO
 import com.tdl.motorinsurance.model.NomineeDTO
 import com.tdl.motorinsurance.model.Vehicle_DerivedDTO
 import org.ktorm.database.TransactionIsolation
@@ -74,10 +75,32 @@ class Veicle_DerivedRepositary {
 
 
 
-    suspend fun getVeicle_DerivedWithCustomers(): List<Vehicle_Derived> {
+    suspend fun getVeicle_DerivedWithCustomers(): List<Vehicle_DerivedDTO> {
         return DatabaseFactory.dbQuery {
             DatabaseFactory.getConnection().from(Vehicles_Derived).joinReferencesAndSelect()
-                .map { row -> Vehicles_Derived.createEntity(row, withReferences = true) }
+                .map { row -> Vehicles_Derived.createEntity(row, withReferences = true) }.map {
+                    Vehicle_DerivedDTO(
+                        it.id,
+                        it.reg_number,
+                        it.customer.id,
+                        it.segment,
+                        it.cubic_capacity,
+                        it.seating_capacity,
+                        it.purchase_date,
+                        it.fuel,
+                        it.body_type,
+                        it.rto,
+                        CustomerDTO(
+                            it.customer.id,
+                            it.customer.cust_hash,
+                            it.customer.name,
+                            it.customer.phone_number,
+                            it.customer.email,
+                            it.customer.created_at,
+                            it.customer.updated_at
+                        )
+                    )
+                }
         }
     }
 

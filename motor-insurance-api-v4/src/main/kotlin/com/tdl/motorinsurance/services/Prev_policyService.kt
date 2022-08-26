@@ -19,7 +19,7 @@ class Prev_policyService {
         return prev_policyRepository.getPrev_Policy()
     }
 
-    suspend fun getPrev_policyWithVehicle(): List<Prev_Policy> {
+    suspend fun getPrev_policyWithVehicle(): List<Prev_PolicyDTO> {
         return prev_policyRepository.getPrev_PolicyWithVehicle()
     }
 
@@ -33,5 +33,8 @@ class Prev_policyService {
 
     suspend fun deleteById(params: Prev_PolicyDTO):Int{
         return prev_policyRepository.deleteBYid(params)
+    }
+    suspend fun getOnboarding(params: Prev_PolicyDTO){
+        return prev_policyRepository.getOnboarding(params)
     }
 }

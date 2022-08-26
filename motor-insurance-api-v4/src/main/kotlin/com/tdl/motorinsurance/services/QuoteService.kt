@@ -19,7 +19,7 @@ class QuoteService {
         return quoteRepository.getQuotes()
     }
 
-    suspend fun getQuotess(): List<Quote> {
+    suspend fun getQuotess(): List<QuoteDTO> {
         return quoteRepository.getNomineesWithCustomers()
     }
 }

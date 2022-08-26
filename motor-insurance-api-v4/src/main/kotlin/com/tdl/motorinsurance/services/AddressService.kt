@@ -19,7 +19,7 @@ class AddressService {
         return addressRepository.getAddress()
     }
 
-    suspend fun getAddressWithCustomersandVehicle(): List<Address> {
+    suspend fun getAddressWithCustomersandVehicle(): List<AddressDTO> {
         return addressRepository.getAddressWithCustomersandVehicle()
     }
 

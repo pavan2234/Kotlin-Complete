@@ -26,10 +26,20 @@ class CustomerRepository {
         }
     }
 
-    suspend fun getCustomers(): List<Customer> {
+    suspend fun getCustomers(): List<CustomerDTO> {
         return DatabaseFactory.dbQuery {
             DatabaseFactory.getConnection().from(Customers).select()
-                .map { row -> Customers.createEntity(row) }
+                .map { row -> Customers.createEntity(row) }.map {
+                    CustomerDTO(
+                        it.id,
+                        it.cust_hash,
+                        it.name,
+                        it.phone_number,
+                        it.email,
+                        it.created_at,
+                        it.updated_at
+                    )
+                }
         }
     }
 }

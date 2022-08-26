@@ -18,7 +18,7 @@ class VehicleService {
         return vehicleRepository.getVehicles()
     }
 
-    suspend fun getVehicleWithCustomers(): List<Vehicle> {
+    suspend fun getVehicleWithCustomers(): List<VehicleDTO> {
         return vehicleRepository.getVehicleWithCustomers()
     }
 

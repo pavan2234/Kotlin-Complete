@@ -3,7 +3,8 @@ package com.tdl.motorinsurance.repositaries
 import com.tdl.motorinsurance.dbconfig.DatabaseFactory
 import com.tdl.motorinsurance.entities.*
 import com.tdl.motorinsurance.model.AddressDTO
-import com.tdl.motorinsurance.model.NomineeDTO
+import com.tdl.motorinsurance.model.CustomerDTO
+import com.tdl.motorinsurance.model.VehicleDTO
 import org.ktorm.database.TransactionIsolation
 import org.ktorm.dsl.*
 
@@ -71,13 +72,11 @@ class AddressRepositary {
             return false
     }
 
-
-
-
     suspend fun getAddress(): List<Address> {
         return DatabaseFactory.dbQuery {
             DatabaseFactory.getConnection().from(Addresses).select()
-                .map { row -> Addresses.createEntity(row) }
+                .map { row -> Addresses.createEntity(row)}
+
         }
     }
 
@@ -85,10 +84,53 @@ class AddressRepositary {
     /*-------------------------------------------------------*/
 
 
-    suspend fun getAddressWithCustomersandVehicle(): List<Address> {
+    suspend fun getAddressWithCustomersandVehicle(): List<AddressDTO> {
         return DatabaseFactory.dbQuery {
             DatabaseFactory.getConnection().from(Addresses).joinReferencesAndSelect()
-                .map { row -> Addresses.createEntity(row, withReferences = true) }
+                .map { row -> Addresses.createEntity(row, withReferences = true) }.map {
+                    AddressDTO(
+                        it.id,
+                        it.customer.id,
+                        it.vehicle.id,
+                        it.addr_line1,
+                        it.addr_line2,
+                        it.pincode,
+                        it.created_at,
+                        it.updated_at,
+                        CustomerDTO(
+                            it.customer.id,
+                            it.customer.cust_hash,
+                            it.customer.name,
+                            it.customer.phone_number,
+                            it.customer.email,
+                            it.customer.created_at,
+                            it.customer.updated_at
+                        ),
+                        VehicleDTO(
+                            it.vehicle.id,
+                            it.vehicle.cust_id,
+                            it.vehicle.reg_number,
+                            it.vehicle.type,
+                            it.vehicle.make,
+                            it.vehicle.model,
+                            it.vehicle.variant,
+                            it.vehicle.reg_date,
+                            it.vehicle.engine_number,
+                            it.vehicle.chassis_number,
+                            it.vehicle.created_at,
+                            it.vehicle.updated_at,
+                            CustomerDTO(
+                                it.customer.id,
+                                it.customer.cust_hash,
+                                it.customer.name,
+                                it.customer.phone_number,
+                                it.customer.email,
+                                it.customer.created_at,
+                                it.customer.updated_at
+                            )
+                        )
+                    )
+                }
         }
     }
 

@@ -16,7 +16,7 @@ class NomineeService {
         return nomineeRepository.getNominees()
     }
 
-    suspend fun getNomineesWithCustomers(): List<Nominee> {
+    suspend fun getNomineesWithCustomers(): List<NomineeDTO> {
         return nomineeRepository.getNomineesWithCustomers()
     }
 

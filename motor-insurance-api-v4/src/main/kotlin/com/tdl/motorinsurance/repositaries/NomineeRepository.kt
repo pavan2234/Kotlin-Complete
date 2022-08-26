@@ -4,6 +4,7 @@ import com.tdl.motorinsurance.dbconfig.DatabaseFactory
 import com.tdl.motorinsurance.entities.Customers
 import com.tdl.motorinsurance.entities.Nominee
 import com.tdl.motorinsurance.entities.Nominees
+import com.tdl.motorinsurance.model.CustomerDTO
 import com.tdl.motorinsurance.model.NomineeDTO
 import org.ktorm.database.TransactionIsolation
 import org.ktorm.dsl.*
@@ -73,10 +74,30 @@ class NomineeRepository {
            /*-------------------------------------------------------*/
 
 
-    suspend fun getNomineesWithCustomers(): List<Nominee> {
+    suspend fun getNomineesWithCustomers(): List<NomineeDTO> {
         return DatabaseFactory.dbQuery {
             DatabaseFactory.getConnection().from(Nominees).joinReferencesAndSelect()
-                .map { row -> Nominees.createEntity(row, withReferences = true) }
+                .map { row -> Nominees.createEntity(row, withReferences = true) }.map {
+                    NomineeDTO(
+                    it.id,
+                    it.customer.id,
+                    it.name,
+                    it.relationship,
+                    it.age,
+                    it.guardian,
+                    it.created_at,
+                    it.updated_at,
+                    CustomerDTO(
+                        it.customer.id,
+                        it.customer.cust_hash,
+                        it.customer.name,
+                        it.customer.phone_number,
+                        it.customer.email,
+                        it.customer.created_at,
+                        it.customer.updated_at
+                    )
+                    )
+                }
         }
     }
 
