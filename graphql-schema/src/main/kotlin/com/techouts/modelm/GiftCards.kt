@@ -4,7 +4,7 @@ data class GiftCards(
     val transactionId: Int,
     val cardNumber: String,
     val cardPIN: String
-   /* val amount: Int,
+  /*  val amount: Int,
     val approvalCode: String,
     val addonCardNumber: String,
     val merchantName: String,

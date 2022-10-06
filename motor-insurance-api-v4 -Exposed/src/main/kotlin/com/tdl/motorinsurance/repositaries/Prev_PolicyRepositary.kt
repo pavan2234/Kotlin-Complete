@@ -205,13 +205,11 @@ class Prev_PolicyRepositary {
     }
 
 
-    fun getOnboarding(params: Prev_PolicyDTO):Int{
-        val dbConnection = DatabaseFactory.getConnection()
-        val transaction =
-            dbConnection.transactionManager.newTransaction(isolation = TransactionIsolation.READ_COMMITTED)
-        try {
-
-        }
-    }
+//    fun getOnboarding(params: Prev_PolicyDTO):Int{
+//        val dbConnection = DatabaseFactory.getConnection()
+//        val transaction =
+//            dbConnection.transactionManager.newTransaction(isolation = TransactionIsolation.READ_COMMITTED)
+//
+//    }
 
 }

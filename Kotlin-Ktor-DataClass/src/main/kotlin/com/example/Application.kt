@@ -12,7 +12,7 @@ fun main() {
     install(ContentNegotiation){
         json()
     }
-        //configureRouting()
+        configureRouting()
         Printing()
     }.start(wait = true)
 }

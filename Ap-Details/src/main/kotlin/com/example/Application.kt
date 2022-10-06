@@ -12,7 +12,7 @@ import io.ktor.server.plugins.*
 import kotlinx.serialization.json.Json
 
 fun main() {
-    embeddedServer(Netty, port = 8088, host = "0.0.0.0") {
+    embeddedServer(Netty, port = 2234, host = "0.0.0.0") {
         install(ContentNegotiation){
             json(Json{ ignoreUnknownKeys = true })
         }

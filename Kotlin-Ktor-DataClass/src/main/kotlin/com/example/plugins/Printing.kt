@@ -9,12 +9,7 @@ import me.liuwj.ktorm.dsl.select
 
 
 fun Application.Printing(){
-    routing {
-        get {
-
-        }
         for(data in database.from(student).select()){
             println(data)
         }
     }
-}
