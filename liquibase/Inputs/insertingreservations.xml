@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<resultset statement="SELECT * FROM ihcl.reservations
+LIMIT 0, 1000
+"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<row>
+		<field name="restaurantId">1</field>
+		<field name="reservationTime">8pam</field>
+		<field name="reservationDate">10/05/2022</field>
+		<field name="noOfPeople">4</field>
+		<field name="customerId">1869</field>
+		<field name="lastName">Pavan</field>
+		<field name="firstName">Ananthoju</field>
+		<field name="reservationNotes">Blue Table</field>
+		<field name="mobile">9703562234</field>
+		<field name="landline">200500</field>
+		<field name="email">pavan92000@gmail.com</field>
+		<field name="interfaceId">100</field>
+		<field name="occasion">birthday</field>
+		<field name="eatNowFlag">1</field>
+		<field name="sessionName">dinner</field>
+		<field name="sessionId">1020</field>
+		<field name="sourceApp">Zomato</field>
+		<field name="packageName">Family</field>
+		<field name="tableNo">Five</field>
+		<field name="tableStatus">reserved</field>
+		<field name="waitListedFlag">98</field>
+		<field name="strLocTitle">no</field>
+	</row>
+
+	<row>
+		<field name="restaurantId">2</field>
+		<field name="reservationTime">8pam</field>
+		<field name="reservationDate">10/05/2022</field>
+		<field name="noOfPeople">4</field>
+		<field name="customerId">1869</field>
+		<field name="lastName">Pavan Kumar Up</field>
+		<field name="firstName">Ananthoju</field>
+		<field name="reservationNotes">Blue Table</field>
+		<field name="mobile">9703562234</field>
+		<field name="landline">200500</field>
+		<field name="email">pavan92000@gmail.com</field>
+		<field name="interfaceId">100</field>
+		<field name="occasion">birthday</field>
+		<field name="eatNowFlag">1</field>
+		<field name="sessionName">dinner</field>
+		<field name="sessionId">1020</field>
+		<field name="sourceApp">Zomato</field>
+		<field name="packageName">Family</field>
+		<field name="tableNo">Five</field>
+		<field name="tableStatus">reserved</field>
+		<field name="waitListedFlag">98</field>
+		<field name="strLocTitle">no</field>
+	</row>
+</resultset>

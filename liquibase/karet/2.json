@@ -1,0 +1,81 @@
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "1661319827585-1",
+      "author": "D1 (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true,
+                    "unique": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "name",
+                  "type": "VARCHAR(450)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "age",
+                  "type": "VARCHAR(450)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "area",
+                  "type": "VARCHAR(450)"
+                }
+              }
+            ]
+            ,
+            "tableName": "trainees"
+          }
+        }
+      ]
+      
+    }
+  }
+  
+],
+[{
+    "changeSet": {
+      "id": "1661319827585-1",
+      "author": "D1 (generated)",
+      "changes": [
+        {
+          "insert": {
+            "columns": [
+              {
+				"id":2,
+				"name":"Pavan2",
+				"age":"222",
+				"area":"uppal-boduppal2"
+				}
+			]
+			
+
+					}
+		}
+]
+	}	
+}	
+]

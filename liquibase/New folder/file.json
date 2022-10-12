@@ -1,0 +1,113 @@
+{ "databaseChangeLog": [
+
+{
+    "changeSet": {
+      "id": "1660109200272-12",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "reg_number",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cust_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "segment",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cubic_capacity",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "seating_capacity",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "purchase_date",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "fuel",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "body_type",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "rto",
+                  "type": "JSON"
+                }
+              }
+            ]
+            ,
+            "tableName": "vehicle_derived"
+					}
+		
+		}
+		]
+	}
+	}
+	]
+}

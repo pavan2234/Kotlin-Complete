@@ -1,0 +1,461 @@
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "1660650898309-1",
+      "author": "D1 (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true,
+                    "unique": true
+                  },
+                  "name": "TransactionId",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "CardNumber",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "CardPIN",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "Amount",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ApprovalCode",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "AddonCardNumber",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MerchantName",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "DiscountAmount",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PaymentType",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ResponseMessage",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MerchantOutletAddress1",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MerchantOutletAddress2",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MerchantOutletCity",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MerchantOutletState",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MerchantOutletCountry",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MerchantOutletPinCode",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ReceiptFooterLine1",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ReceiptFooterLine2",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ReceiptFooterLine3",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ReceiptFooterLine4",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "CardType",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "TransactionResult",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "giftcards"
+          }
+        },
+		{
+			"TransactionId" : 1,
+			"CardNumber" : "606721323290",
+			"CardPIN" : "1869",
+			"Amount" : 2000,
+			"ApprovalCode" : "approved10",
+			"AddonCardNumber" : "606721322234",
+			"MerchantName" : "Pavan Ananthoju",
+			"DiscountAmount" : 20,
+			"PaymentType" : "Card",
+			"ResponseMessage" : "Success",
+			"MerchantOutletAddress1" : "Telecomnagar",
+			"MerchantOutletAddress2" : "Gachibowli",
+			"MerchantOutletCity" : "Hyderabad",
+			"MerchantOutletState" : "Telangana",
+			"MerchantOutletCountry" : "India",
+			"MerchantOutletPinCode" : "500032",
+			"ReceiptFooterLine1" : "Thank you",
+			"ReceiptFooterLine2" : "You",
+			"ReceiptFooterLine3" : "are",
+			"ReceiptFooterLine4" : "welcome",
+			"CardType" : "Visa",
+			"TransactionResult" : "Successs"
+		}
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660650898309-2",
+      "author": "D1 (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "restaurantId",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "reservationTime",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "reservationDate",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "noOfPeople",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "customerId",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "lastName",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "firstName",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "reservationNotes",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "mobile",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "landline",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "email",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "interfaceId",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "occasion",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "eatNowFlag",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "sessionName",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "sessionId",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "sourceApp",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "packageName",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "tableNo",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "tableStatus",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "waitListedFlag",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "strLocTitle",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "reservations"
+          }
+        }
+      ]
+      
+    }
+  }
+  
+]}

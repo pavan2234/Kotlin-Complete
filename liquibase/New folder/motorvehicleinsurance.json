@@ -1,0 +1,1040 @@
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "1660109200272-1",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cust_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "veh_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "addr_line1",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "addr_line2",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "pincode",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "created_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "updated_at",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "address"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-2",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "emp_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "id",
+                  "type": "JSON"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "emp_Name",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "comp"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-3",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cust_hash",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "name",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "phone_number",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "email",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "created_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "updated_at",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "customer"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-4",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "mobile",
+                  "type": "INT"
+                }
+              }
+            ]
+            ,
+            "tableName": "hello"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-5",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "email",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "phone_number",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "nomineeid",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "insureddetails"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-6",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cust_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "name",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "relationship",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "age",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "created_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "updated_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "guardian",
+                  "type": "JSON"
+                }
+              }
+            ]
+            ,
+            "tableName": "nomine"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-7",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "quote_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cust_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "tcp_order_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "tcp_transaction_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "tcp_refund_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "policy_number",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "order_amount",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "status",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "failure_code",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "failure_reason",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "created_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "updated_at",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "orders"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-8",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "veh_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "insurer_name",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "policy_number",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "is_expired",
+                  "type": "BOOLEAN"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "created_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "updated_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ncb_benifit",
+                  "type": "JSON"
+                }
+              }
+            ]
+            ,
+            "tableName": "prev_policy"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-9",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "veh_id",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cust_id",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "prev_policy_id",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "nominees",
+                  "type": "JSON"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "addr_id",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "type",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "insurer",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "insurerr",
+                  "type": "JSON"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "idv_details",
+                  "type": "JSON"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "add_ons",
+                  "type": "JSON"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "created_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "updated_at",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "quote"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-10",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "name",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "std"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-11",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cust_id",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "reg_number",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "type",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "make",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "model",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "variant",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "reg_date",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "engine_number",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "chassis_number",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "created_at",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "updated_at",
+                  "type": "VARCHAR(45)"
+                }
+              }
+            ]
+            ,
+            "tableName": "vehicle"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1660109200272-12",
+      "author": "tech (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true
+                  },
+                  "name": "id",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "reg_number",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cust_id",
+                  "type": "VARCHAR(450)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "segment",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "cubic_capacity",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "seating_capacity",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "purchase_date",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "fuel",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "body_type",
+                  "type": "VARCHAR(45)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "rto",
+                  "type": "JSON"
+                }
+              }
+            ]
+            ,
+            "tableName": "vehicle_derived"
+          }
+        }
+      ]
+      
+    }
+  }
+  
+]}

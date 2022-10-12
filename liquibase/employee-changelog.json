@@ -1,0 +1,50 @@
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "1660046239846-1",
+      "author": "D1 (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true,
+                    "unique": true
+                  },
+                  "name": "sno",
+                  "type": "INT"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "name",
+                  "type": "VARCHAR(4500)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "empid",
+                  "type": "VARCHAR(4500)"
+                }
+              }
+            ]
+            ,
+            "tableName": "details"
+          }
+        }
+      ]
+      
+    }
+  }
+  
+]}

@@ -1,0 +1,143 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="D1 (generated)" id="1660644813618-1">
+        <createTable tableName="giftcards">
+            <column name="TransactionId" type="INT">
+                <constraints nullable="false" primaryKey="true" unique="true"/>
+            </column>
+            <column name="CardNumber" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CardPIN" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Amount" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ApprovalCode" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AddonCardNumber" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MerchantName" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DiscountAmount" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PaymentType" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ResponseMessage" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MerchantOutletAddress1" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MerchantOutletAddress2" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MerchantOutletCity" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MerchantOutletState" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MerchantOutletCountry" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MerchantOutletPinCode" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ReceiptFooterLine1" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ReceiptFooterLine2" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ReceiptFooterLine3" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ReceiptFooterLine4" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CardType" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TransactionResult" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="D1 (generated)" id="1660644813618-2">
+        <createTable tableName="reservations">
+            <column name="restaurantId" type="INT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="reservationTime" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reservationDate" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="noOfPeople" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="customerId" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lastName" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="firstName" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reservationNotes" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="mobile" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landline" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="interfaceId" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="occasion" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="eatNowFlag" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sessionName" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sessionId" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sourceApp" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="packageName" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tableNo" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tableStatus" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="waitListedFlag" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="strLocTitle" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
